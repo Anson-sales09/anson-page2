@@ -50,6 +50,26 @@ h1 strong{color:var(--primary)}
 .primary:hover{background:var(--dark)}
 .soft{background:var(--soft);color:var(--dark)}
 .soft:hover{background:#ecdccf;color:var(--text)}
+.dark-btn{background:#352B25;color:#fff}
+.dark-btn:hover{background:#1E1612;color:#fff}
+
+.download-card{
+  background:#fff;border:1px solid var(--line);border-radius:24px;
+  padding:32px 36px;display:flex;align-items:center;gap:24px;
+  box-shadow:var(--shadow);transition:transform .25s ease,box-shadow .25s ease
+}
+.download-card:hover{transform:translateY(-3px);box-shadow:0 28px 60px rgba(80,60,48,.12)}
+.download-icon{font-size:44px;line-height:1;flex-shrink:0}
+.download-info{flex-grow:1}
+.download-info h3{margin:0 0 6px;font-size:20px;color:var(--text)}
+.download-info p{margin:0 0 8px;color:var(--muted);font-size:14px}
+.file-tag{display:inline-block;padding:3px 10px;background:var(--soft);color:var(--dark);font-size:12px;font-weight:700;border-radius:999px}
+.download-actions{display:flex;gap:10px;flex-wrap:wrap;flex-shrink:0}
+@media(max-width:768px){
+  .download-card{flex-direction:column;align-items:flex-start;padding:22px}
+  .download-actions{width:100%}
+  .download-actions .btn{flex:1;text-align:center;justify-content:center}
+}
 
 /* Animated welcome hero */
 .welcome-card{
@@ -381,6 +401,7 @@ footer{padding:35px 0 55px;text-align:center;color:var(--muted);font-size:13px}
     <div class="menu">
       <a href="#story">我們的故事</a><a href="#growth">成長紀錄</a>
       <a href="#album">生活相簿</a><a href="#letter">給你的話</a>
+      <a href="#download">檔案下載</a>
     </div>
   </div>
 </nav>
@@ -391,7 +412,11 @@ footer{padding:35px 0 55px;text-align:center;color:var(--muted);font-size:13px}
     <div class="eyebrow">OUR FAMILY MEMORY JOURNAL</div>
     <h1>把一起長大的<br><strong>每一天</strong>，收藏起來。</h1>
     <p class="lead">有些日子看起來很普通，過幾年回頭看，卻會發現那就是我們最珍貴的回憶。這裡記錄你的成長，也記錄我們一起生活的每一個小片段。</p>
-    <div class="actions"><a class="btn primary" href="#growth">看看成長紀錄</a><a class="btn soft" href="#album">瀏覽生活相簿</a></div>
+    <div class="actions">
+      <a class="btn primary" href="#growth">看看成長紀錄</a>
+      <a class="btn soft" href="#album">瀏覽生活相簿</a>
+      <a class="btn dark-btn" href="產業人才投資計畫.pdf" download="產業人才投資計畫.pdf">📥 下載計畫 PDF</a>
+    </div>
   </div>
 
   <div class="welcome-card" id="welcomeSlider">
@@ -508,6 +533,27 @@ footer{padding:35px 0 55px;text-align:center;color:var(--muted);font-size:13px}
       </div>
     </div>
 
+  </div>
+</section>
+
+<section id="download">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="kicker">DOCUMENT DOWNLOAD</div><h2>檔案下載專區</h2></div>
+      <p class="desc">歡迎點擊下方按鈕下載或線上預覽「產業人才投資計畫」官方完整規範與表單 PDF 檔案。</p>
+    </div>
+    <div class="download-card">
+      <div class="download-icon">📑</div>
+      <div class="download-info">
+        <h3>產業人才投資計畫 (Industrial Human Resource Investment Plan)</h3>
+        <p>勞動部勞動力發展署 113年12月25日發訓字第1132504210號令修正發布 · 完整 22 頁法規與審查附件</p>
+        <span class="file-tag">PDF 官方文件 · 22 頁 · 約 300 KB</span>
+      </div>
+      <div class="download-actions">
+        <a class="btn primary" href="產業人才投資計畫.pdf" download="產業人才投資計畫.pdf">📥 立即下載 PDF</a>
+        <a class="btn soft" href="產業人才投資計畫.pdf" target="_blank" rel="noopener">👁 線上預覽</a>
+      </div>
+    </div>
   </div>
 </section>
 
